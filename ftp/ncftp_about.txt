@@ -1,0 +1,4 @@
+NcFTPPut 3.2.5
+
+This is a freeware program by Mike Gleason (http://www.ncftp.com).
+This was built using LibNcFTP (http://www.ncftp.com/libncftp/).

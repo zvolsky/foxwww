@@ -1,0 +1,21 @@
+(dp1
+S'output'
+p2
+S"<type 'exceptions.AttributeError'> 'DAL' object has no attribute 'codex'"
+p3
+sS'layer'
+p4
+S'C:\\Python27\\Lib\\site-packages\\web2py\\applications\\viewer\\controllers/show.py'
+p5
+sS'code'
+p6
+S"# -*- coding: utf-8 -*-\n\ndef index():\n    redirect(URL('table'))\n\ndef table():\n    '''\n    auth_prefix = 'auth_'    # hide authorizations tables\n    len_prefix = len(auth_prefix)\n    table = request.args\n    if table not in filter(lambda candidate: candidate[:len_prefix]!=auth_prefix, db.tables):\n        for table in db.tables:\n            if table[:len_prefix]!=auth_prefix:\n                break\n    '''\n    table = request.args(0) or dbv.tables[0]\n    grid = SQLFORM.smartgrid(\n            dbv[table]\n            )\n\n    return dict(grid=grid)\n\nresponse._vars=response._caller(table)\n"
+p7
+sS'snapshot'
+p8
+(dp9
+sS'traceback'
+p10
+S'Traceback (most recent call last):\n  File "C:\\Python27\\Lib\\site-packages\\web2py\\gluon\\restricted.py", line 224, in restricted\n    exec ccode in environment\n  File "C:\\Python27\\Lib\\site-packages\\web2py\\applications\\viewer\\controllers/show.py", line 23, in <module>\n  File "C:\\Python27\\Lib\\site-packages\\web2py\\gluon\\globals.py", line 393, in <lambda>\n    self._caller = lambda f: f()\n  File "C:\\Python27\\Lib\\site-packages\\web2py\\applications\\viewer\\controllers/show.py", line 18, in table\n    dbv[table]\n  File "C:\\Python27\\Lib\\site-packages\\web2py\\gluon\\dal\\base.py", line 886, in __getitem__\n    return self.__getattr__(str(key))\n  File "C:\\Python27\\Lib\\site-packages\\web2py\\gluon\\dal\\base.py", line 893, in __getattr__\n    return ogetattr(self, key)\nAttributeError: \'DAL\' object has no attribute \'codex\'\n'
+p11
+s.
